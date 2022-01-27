@@ -39,7 +39,7 @@ class SM64World(World):
         return item
 
     def generate_basic(self):
-        staritem = self.create_item("Star")
+        staritem = self.create_item("Power Star")
         if (self.world.EnableCoinStars[self.player].value):
             self.world.itempool += [staritem for i in range(0,120)]
         else:
