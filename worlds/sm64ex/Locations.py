@@ -10,7 +10,7 @@ locBoB_table = {
     "Shoot to the Island in the Sky": 3626002,
     "Find the 8 Red Coins": 3626003,
     "Mario Wings to the Sky": 3626004,
-    "Behind Chain Chomps Gate": 3626005
+    "Behind Chain Chomp's Gate": 3626005
 }
 
 #Whomp's Fortress
