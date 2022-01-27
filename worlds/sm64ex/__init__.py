@@ -45,7 +45,7 @@ class SM64World(World):
         else:
             self.world.itempool += [staritem for i in range(0,105)]
 
-        key1 = self.create_item("Cellar Key")
+        key1 = self.create_item("Basement Key")
         key2 = self.create_item("Second Floor Key")
         self.world.itempool += [key1,key2]
 
