@@ -5,7 +5,7 @@ class SM64Item(Item):
 
 item_table = {
     "Star": 3626000,
-    "Cellar Key": 3626178,
+    "Basement Key": 3626178,
     "Second Floor Key": 3626179,
     "Wing Cap": 3626180,
     "Metal Cap": 3626181,
