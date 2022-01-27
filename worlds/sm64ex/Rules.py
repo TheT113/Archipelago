@@ -60,9 +60,9 @@ def set_rules(world,player):
     if (world.StrictCapRequirements[player].value):
         add_rule(world.get_location("Mario Wings to the Sky", player), lambda state: state.has("Wing Cap", player))
         add_rule(world.get_location("Metal-Head Mario Can Move!", player), lambda state: state.has("Metal Cap", player))
-        add_rule(world.get_location("JRB: Through the Jet Stream", player), lambda state: state.has("Metal Cap", player))
+        add_rule(world.get_location("Through the Jet Stream (JRB)", player), lambda state: state.has("Metal Cap", player))
         add_rule(world.get_location("Free Flying for 8 Red Coins", player), lambda state: state.has("Wing Cap", player))
-        add_rule(world.get_location("DDD: Through the Jet Stream", player), lambda state: state.has("Metal Cap", player))
+        add_rule(world.get_location("Through the Jet Stream (DDD)", player), lambda state: state.has("Metal Cap", player))
         add_rule(world.get_location("Vanish Cap Under the Moat Red Coins", player), lambda state: state.has("Vanish Cap", player))
 
     #Rules for Secret Stars
