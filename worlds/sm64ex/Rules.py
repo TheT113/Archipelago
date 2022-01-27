@@ -4,10 +4,10 @@ from .Regions import connect_regions
 
 def set_rules(world,player):
     connect_regions(world, player, "Menu", "Bob-omb Battlefield", lambda state: True)
-    connect_regions(world, player, "Menu", "Whomp's Fortress", lambda state: state.has("Star", player, 1))
-    connect_regions(world, player, "Menu", "Jolly Roger Bay", lambda state: state.has("Star", player, 3))
-    connect_regions(world, player, "Menu", "Cool, Cool Mountain", lambda state: state.has("Star", player, 3))
-    connect_regions(world, player, "Menu", "Big Boo's Haunt", lambda state: state.has("Star", player, 12))
+    connect_regions(world, player, "Menu", "Whomp's Fortress", lambda state: state.has("Power Star", player, 1))
+    connect_regions(world, player, "Menu", "Jolly Roger Bay", lambda state: state.has("Power Star", player, 3))
+    connect_regions(world, player, "Menu", "Cool, Cool Mountain", lambda state: state.has("Power Star", player, 3))
+    connect_regions(world, player, "Menu", "Big Boo's Haunt", lambda state: state.has("Power Star", player, 12))
 
     connect_regions(world, player, "Menu", "Basement", lambda state: state.has("Basement Key", player))
     connect_regions(world, player, "Basement", "Menu", lambda state: True)
@@ -15,7 +15,7 @@ def set_rules(world,player):
     connect_regions(world, player, "Basement", "Hazy Maze Cave", lambda state: True)
     connect_regions(world, player, "Basement", "Lethal Lava Land", lambda state: True)
     connect_regions(world, player, "Basement", "Shifting Sand Land", lambda state: True)
-    connect_regions(world, player, "Basement", "Dire, Dire Docks", lambda state: state.has("Star", player, 30))
+    connect_regions(world, player, "Basement", "Dire, Dire Docks", lambda state: state.has("Power Star", player, 30))
 
     connect_regions(world, player, "Menu", "Second Floor", lambda state: state.has("Second Floor Key", player))
     connect_regions(world, player, "Second Floor", "Menu", lambda state: True)
@@ -25,7 +25,7 @@ def set_rules(world,player):
     connect_regions(world, player, "Second Floor", "Tall, Tall Mountain", lambda state: True)
     connect_regions(world, player, "Second Floor", "Tiny-Huge Island", lambda state: True)
 
-    connect_regions(world, player, "Second Floor", "Third Floor", lambda state: state.has("Star", player, 50))
+    connect_regions(world, player, "Second Floor", "Third Floor", lambda state: state.has("Power Star", player, 50))
     connect_regions(world, player, "Third Floor", "Second Floor", lambda state: True)
 
     connect_regions(world, player, "Third Floor", "Tick Tock Clock", lambda state: True)
@@ -48,7 +48,7 @@ def set_rules(world,player):
     connect_regions(world, player, "Rainbow Ride", "Second Floor", lambda state: True)
 
     #Special Rules for some Locations
-    add_rule(world.get_location("Wing Cap Switch", player), lambda state: state.has("Star", player, 10))
+    add_rule(world.get_location("Wing Cap Switch", player), lambda state: state.has("Power Star", player, 10))
     add_rule(world.get_location("Metal Cap Switch", player), lambda state: state.can_reach("Basement", 'Region', player))
     add_rule(world.get_location("Vanish Cap Switch", player), lambda state: state.can_reach("Basement", 'Region', player))
 
@@ -66,11 +66,11 @@ def set_rules(world,player):
         add_rule(world.get_location("Vanish Cap Under the Moat Red Coins", player), lambda state: state.has("Vanish Cap", player))
 
     #Rules for Secret Stars
-    add_rule(world.get_location("Bowser in the Dark World Red Coins", player), lambda state: state.has("Star", player, 8))
-    add_rule(world.get_location("Bowser in the Fire Sea Red Coins", player), lambda state: state.can_reach("Basement",'Region',player) and state.has("Star", player, 30))
-    add_rule(world.get_location("Bowser in the Sky Red Coins", player), lambda state: state.can_reach("Third Floor",'Region',player) and state.has("Star", player, world.StarsToFinish[player].value))
-    add_rule(world.get_location("The Princess's Secret Slide Block", player), lambda state: state.has("Star", player, 1))
-    add_rule(world.get_location("The Princess's Secret Slide Fast", player), lambda state: state.has("Star", player, 1))
+    add_rule(world.get_location("Bowser in the Dark World Red Coins", player), lambda state: state.has("Power Star", player, 8))
+    add_rule(world.get_location("Bowser in the Fire Sea Red Coins", player), lambda state: state.can_reach("Basement",'Region',player) and state.has("Power Star", player, 30))
+    add_rule(world.get_location("Bowser in the Sky Red Coins", player), lambda state: state.can_reach("Third Floor",'Region',player) and state.has("Power Star", player, world.StarsToFinish[player].value))
+    add_rule(world.get_location("The Princess's Secret Slide Block", player), lambda state: state.has("Power Star", player, 1))
+    add_rule(world.get_location("The Princess's Secret Slide Fast", player), lambda state: state.has("Power Star", player, 1))
     add_rule(world.get_location("Cavern of the Metal Cap Red Coins", player), lambda state: state.can_reach("Metal Cap Switch", 'Location', player) and state.has("Metal Cap", player))
     add_rule(world.get_location("Tower of the Wing Cap Red Coins", player), lambda state: state.can_reach("Wing Cap Switch", 'Location', player))
     add_rule(world.get_location("Vanish Cap Under the Moat Red Coins", player), lambda state: state.can_reach("Vanish Cap Switch", 'Location', player))
@@ -79,11 +79,11 @@ def set_rules(world,player):
     add_rule(world.get_location("Toad (Cellar)", player), lambda state: state.can_reach("Basement",'Region',player))
     add_rule(world.get_location("Toad (Second Floor)", player), lambda state: state.can_reach("Second Floor",'Region',player))
     add_rule(world.get_location("Toad (Third Floor)", player), lambda state: state.can_reach("Third Floor",'Region',player))
-    add_rule(world.get_location("MIPS 1", player), lambda state: state.can_reach("Basement",'Region',player) and state.has("Star", player, 15))
-    add_rule(world.get_location("MIPS 2", player), lambda state: state.can_reach("Basement",'Region',player) and state.has("Star", player, 50))
+    add_rule(world.get_location("MIPS 1", player), lambda state: state.can_reach("Basement",'Region',player) and state.has("Power Star", player, 15))
+    add_rule(world.get_location("MIPS 2", player), lambda state: state.can_reach("Basement",'Region',player) and state.has("Power Star", player, 50))
 
     #Rules for Keys
-    add_rule(world.get_location("Bowser in the Dark World Key", player), lambda state: state.has("Star", player, 8))
-    add_rule(world.get_location("Bowser in the Fire Sea Key", player), lambda state: state.can_reach("Basement", 'Region', player) and state.has("Star", player, 30))
+    add_rule(world.get_location("Bowser in the Dark World Key", player), lambda state: state.has("Power Star", player, 8))
+    add_rule(world.get_location("Bowser in the Fire Sea Key", player), lambda state: state.can_reach("Basement", 'Region', player) and state.has("Power Star", player, 30))
 
-    world.completion_condition[player] = lambda state: state.can_reach("Third Floor",'Region',player) and state.has("Star", player, world.StarsToFinish[player].value)
+    world.completion_condition[player] = lambda state: state.can_reach("Third Floor",'Region',player) and state.has("Power Star", player, world.StarsToFinish[player].value)
