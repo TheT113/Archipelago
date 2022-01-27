@@ -30,7 +30,7 @@ locJRB_table = {
     "Treasure of the Ocean Cave": 3626016,
     "Red Coins on the Ship Afloat": 3626017,
     "Blast to the Stone Pillar": 3626018,
-    "JRB: Through the Jet Stream": 3626019 # Prefix due to duplicate name
+    "Through the Jet Stream (JRB)": 3626019 # Suffix due to duplicate name
 }
 
 
@@ -89,7 +89,7 @@ locDDD_table = {
     "Board Bowser's Sub": 3626056,
     "Chests in the Current": 3626057,
     "Pole-Jumping for Red Coins": 3626058,
-    "DDD: Through the Jet Stream": 3626059, # Prefix due to duplicate name
+    "Through the Jet Stream (DDD)": 3626059, # Suffix due to duplicate name
     "The Manta Ray's Reward": 3626060,
     "Collect the Caps...": 3626061
 }
